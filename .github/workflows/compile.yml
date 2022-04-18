@@ -23,5 +23,5 @@ jobs:
         TC: ${{ secrets.TC }}
         COMPILE: ${{ secrets.COMPILE }}
       run: |
-        wget https://raw.githubusercontent.com/TianWalkzzMiku/SR-Kernel/caf-4.4/.circleci/build.sh
+        wget https://raw.githubusercontent.com/TianWalkzzMiku/my-script-1/kernel/vayu/doBuild
         bash build.sh
