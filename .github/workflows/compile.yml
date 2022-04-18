@@ -24,4 +24,4 @@ jobs:
         COMPILE: ${{ secrets.COMPILE }}
       run: |
         wget https://raw.githubusercontent.com/TianWalkzzMiku/my-script-1/kernel/vayu/doBuild
-        bash build.sh
+        bash doBuild
