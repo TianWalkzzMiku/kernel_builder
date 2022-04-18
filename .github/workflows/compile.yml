@@ -15,8 +15,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Building Kernel
       env:
-        TELEGRAM_TOKEN: ${{ 5207751984:AAEcTALJDEx0BlYgesFHgsYTGqLsL2jFZQY }}
-        CHANNEL_ID: ${{ -1001781224906 }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
         K_BRANCH: ${{ secrets.K_BRANCH }}
         TOKED: ${{ secrets.TOKED }}
         RELEASE: ${{ secrets.RELEASE }}
