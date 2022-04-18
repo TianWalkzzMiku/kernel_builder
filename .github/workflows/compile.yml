@@ -23,4 +23,5 @@ jobs:
         TC: ${{ secrets.TC }}
         COMPILE: ${{ secrets.COMPILE }}
       run: |
+        wget https://raw.githubusercontent.com/TianWalkzzMiku/kernel_builder/vayu/.github/workflows/build.sh
         bash build.sh
