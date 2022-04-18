@@ -17,7 +17,7 @@ jobs:
       env:
         TELEGRAM_TOKEN: ${{ 5207751984:AAEcTALJDEx0BlYgesFHgsYTGqLsL2jFZQY }}
         CHANNEL_ID: ${{ -1001781224906 }}
-        K_BRANCH: ${{ https://github.com/TianWalkzzMiku/SR-Kernel -b caf-4.4 }}
+        K_BRANCH: ${{  secrets.K_BRANCH }}
         TOKED: ${{ secrets.TOKED }}
         RELEASE: ${{ secrets.RELEASE }}
         TC: ${{ secrets.TC }}
