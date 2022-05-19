@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export KERNELNAME=SuperRyzen-CAF-Beta
+export KERNELNAME=HyperRyzen-VIP-EDITION-v21
 
 export KBUILD_BUILD_USER=TianWalkzzMiku
 
