@@ -1,28 +1,44 @@
 #!/bin/bash
 
-export KERNELNAME=HyperRyzen-VIP-EDITION-v21
+export KERNELNAME=Hyper-
 
-export KBUILD_BUILD_USER=TianWalkzzMiku
+export LOCALVERSION=Ryzen-SeaGames-V21-beta
 
-export KBUILD_BUILD_HOST=Whyred@Sangarr
+export KBUILD_BUILD_USER=Tiannn
+
+export KBUILD_BUILD_HOST=Mob-Psycho
 
 export TOOLCHAIN=clang
 
-export DEVICES=whyred
+export DEVICES=whyred,tulip,lavender
 
 source helper
 
 gen_toolchain
 
-send_msg "⏳ Start building ${KERNELNAME} ${LOCALVERSION} | DEVICES: whyred"
+send_msg "⏳ Start building ${KERNELNAME} ${LOCALVERSION} | DEVICES: whyred - tulip"
 
 START=$(date +"%s")
 
 for i in ${DEVICES//,/ }
 do
-       if [ $i == "whyred" ]
+      if [ $i == "whyred" ] || [ $i == "tulip" ]
        then
 	       build ${i} -oldcam
+
+	       build ${i} -newcam
+       fi
+done
+
+send_msg "⏳ Start building ${KERNELNAME} ${LOCALVERSION} | DEVICES: lavender"
+
+for i in ${DEVICES//,/ }
+do
+       if [ $i == "lavender" ]
+       then
+	        build ${i} -oldcam
+
+	        build ${i} -newcam
        fi
 done
 
